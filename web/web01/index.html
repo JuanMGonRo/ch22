@@ -1,9 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title> Sesion en web1</title>
-    <title> Modificado en Github</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      console.log("Inicio del programa de la sesión WEB07");
+    </script>
   </head>
+
   <body>
-    <h1>holis, ya se la sabe mi gente</h1>
+    <h1 class="example">Sesión WEB07</h1>
+    <p class="example" id="parrafo">Hola Crayoli</p>
+    <br />
+    <h3 class="example" id="demo" onclick="changeColor()">Pushame para cambiar el color.</h3>
+    <h2 id="color-h2" onclick="changeColorH2(this, 'green')">
+      Hola, ya casi es viernes
+    </h2>
+    <button onclick="changeColorByClass('red')">Red</button>
+    <button onclick="changeColorByClass('olive')">Olive</button>
+    <button onclick="changeColorByClass('green')">Green</button>
+    <button onclick="changeColorByClass('yellow')">Amarillo</button>
+     <!-- Codigo Javascrtipt dentro de HTML -->
+    <script>
+      document.getElementById("parrafo").innerHTML = "Uso de la API DOM";
+    </script>
+    <!-- Este es el codigo principal para trabajarlo fuera de HTML -->
+    <script src="script.js"></script>
   </body>
 </html>
