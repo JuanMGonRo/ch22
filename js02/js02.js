@@ -129,3 +129,12 @@ function factorialConRecursion(a){
 
 console.log("Factorial de 3 = " + factorialConRecursion(3));
 console.log("Factorial de 5 = " + factorialConRecursion(5));
+
+//Funcion recursiva para enviar saludos
+function saludos(a,b = 1){
+    console.log("Saludos: " + b);  
+    if(b >= a) return 1;
+    return saludos(a,b+1);
+}
+saludos(10);
+
