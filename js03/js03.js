@@ -175,7 +175,7 @@ console.log(`Switch - ${nombrePersona} tu reloj es ${marcaReloj}`);
     Usar switch
 */
 
-let numeroMes = prompt("¿Que numero de mes tienes?");
+let numeroMes = "12"//prompt("¿Que numero de mes tienes?");
 let estacion = "";
 //Switch para obtener la estacion
 let nombreMes = "";
@@ -267,10 +267,24 @@ function escogiendoMesEstacion(numeroMes) {
 }
 
 function comprobarNumero(numeroMes){
-    if(numeroMes>1 && numeroMes<12) escogiendoMesEstacion(pidiendoNumeroMes);
+    if(numeroMes=>1 && numeroMes<=12) escogiendoMesEstacion(pidiendoNumeroMes);
     else console.log("Este numero no es permitido, vuelve a intentarlo");
 }
 
-let pidiendoNumeroMes = parseInt(prompt("Dime el numero de mes"));
+let pidiendoNumeroMes = 12//parseInt(prompt("Dime el numero de mes"));
 comprobarNumero(pidiendoNumeroMes);
+
+//---------Refactorizando
+function factorial( number ){
+    if( number < 1) 
+        return 1;
+    return number * factorial( number - 1 )
+}
+console.log("Factorial 5 = " + factorial(5) ); //120
+
+function factorialTernario( number ){
+ return number <1 ? 1: number * factorialTernario( number - 1 );
+}
+console.log("Factorial 5 = "+ factorialTernario(5));
+
 
